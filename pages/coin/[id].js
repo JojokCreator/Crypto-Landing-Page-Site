@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router'
-
 export async function avoidRateLimit() {
     if (process.env.NODE_ENV === 'production') {
       await sleep()
@@ -39,13 +37,9 @@ export const getStaticProps = async (context) => {
 }
 
 const Details = ({ coin }) => {
-    const router = useRouter() 
     console.log(coin)
     return (
         <div>
-        if (router.isFallback) {
-            <div>Loading...</div>
-          }
             <h1>{ coin.asset.name }</h1>
             <p>{ coin.asset.description }</p>
             <p>Price: { coin.asset.price }</p>
