@@ -4,7 +4,7 @@ export async function avoidRateLimit() {
     }
   }
   
-  function sleep(ms = 500) {
+  function sleep(ms = 1000) {
     return new Promise((res) => setTimeout(res, ms))
   }
 
@@ -37,9 +37,13 @@ export const getStaticProps = async (context) => {
 }
 
 const Details = ({ coin }) => {
+    const router = useRouter() 
     console.log(coin)
     return (
         <div>
+        if (router.isFallback) {
+            <div>Loading...</div>
+          }
             <h1>{ coin.asset.name }</h1>
             <p>{ coin.asset.description }</p>
             <p>Price: { coin.asset.price }</p>
