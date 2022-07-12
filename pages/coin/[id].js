@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router'
+
 export async function avoidRateLimit() {
     if (process.env.NODE_ENV === 'production') {
       await sleep()
