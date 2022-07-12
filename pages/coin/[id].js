@@ -1,4 +1,15 @@
+export async function avoidRateLimit() {
+    if (process.env.NODE_ENV === 'production') {
+      await sleep()
+    }
+  }
+  
+  function sleep(ms = 500) {
+    return new Promise((res) => setTimeout(res, ms))
+  }
+
 export const getStaticPaths = async () => {
+    await avoidRateLimit()
     const res = await fetch('https://www.cryptingup.com/api/assets?size=10')
     const data = await res.json();
 
@@ -15,6 +26,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context) => {
+    await avoidRateLimit()
     const id = context.params.id;
     const res = await fetch('https://www.cryptingup.com/api/assets/' + id)
     const data = await res.json()
