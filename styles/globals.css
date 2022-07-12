@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Mono&display=swap');
+
+body {
+  background: #f2f2f2;
+  color: #333;
+  font-family: "Roboto Mono";
+}
+
+header a{
+  text-decoration: none;
+}
+header {
+  padding: 0 20px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+
+}
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+footer {
+  display: block;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  color: #777;
+  border-top: 1px solid #eaeaea;
+}
+.not-found {
+  text-align: center;
+}
+.not-found a{
+  color: #4979ff;
+  text-decoration: underline;
+}
+input[type=text] {
+  width: 30vw;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  /* background-image: url('../searchicon.png'); */
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+.search {
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  align-items: center;
+}
+.brand a{
+  color: purple;
+  font-size: 1.25rem;
+  margin-left: 20px;
+}
+.brand > img{
+  height: 100%
+
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+ul a {
+  color: black;
+  
+}
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+nav a{
+  text-decoration: none;
+}
+nav {
+  padding: 0 20px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 600px) {
+  input {
+    display: none;
+  }
+}

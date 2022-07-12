@@ -1,0 +1,20 @@
+.title {
+  color: #333;
+  font-family: Roboto Condensed;
+  font-weight: Medium;
+  font-size: 64px;
+  opacity: 1;
+  text-align: left;
+}
+.text {
+  color: #777;
+  font-family: Roboto Mono;
+  font-weight: Regular;
+  font-size: 25px;
+  opacity: 1;
+  text-align: left;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
